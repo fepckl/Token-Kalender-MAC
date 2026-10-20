@@ -1,0 +1,21 @@
+name: macOS build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build TokenCalendar.app
+        run: bash scripts/bundle.sh
+
+      - name: Upload app
+        uses: actions/upload-artifact@v4
+        with:
+          name: TokenCalendar-mac
+          path: build/TokenCalendar-mac.zip
