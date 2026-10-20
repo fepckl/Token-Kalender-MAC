@@ -1,4 +1,4 @@
-# TokenCalender – Mac
+# Token-Kalender-MAC
 
 A native macOS app (SwiftUI, macOS 14+) that shows how many **Claude Code tokens** you used per day in a calendar.
 macOS port of the token calendar from [TokenCalender](https://github.com/fepckl/TokenCalender) (Windows).
